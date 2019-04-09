@@ -12,6 +12,12 @@
     h2 {
       margin-top: 20px;
     }
+    .dropzones {
+      display: flex;
+      .droptarget{
+        width: 50%;
+      }
+    }
   }
 
   .content-section {
@@ -84,6 +90,22 @@
 
     img {
       border-radius: 10px;
+      visibility: hidden;
+    }
+    .destinationImgAni {
+      animation-name: slideUp;
+      animation-duration: 3s;
+      visibility: visible;
+    }
+    @keyframes slideUp {
+      0% {
+        opacity: 0;
+        transform: translateY(100%);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0%);
+      }
     }
   }
 
@@ -110,5 +132,9 @@
         .button-creator(200px, 45px, @button-bg, @white, 1.8rem);     
       }
     }
+  }
+  .form{
+    display: flex;
+    justify-content: space-evenly;
   }
 }// home

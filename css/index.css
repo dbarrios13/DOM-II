@@ -136,6 +136,9 @@ html,
 body {
   font-family: 'Roboto', sans-serif;
 }
+body {
+  height: 1000px;
+}
 h1,
 h2,
 h3,
@@ -215,6 +218,9 @@ img {
   color: #212529;
   text-decoration: none;
 }
+.main-navigation .nav-container .nav .navSize {
+  font-size: 3.2rem;
+}
 .footer {
   width: 100%;
   border-top: 2px dashed #C0C0C0;
@@ -236,6 +242,12 @@ img {
 }
 .home .intro h2 {
   margin-top: 20px;
+}
+.home .intro .dropzones {
+  display: flex;
+}
+.home .intro .dropzones .droptarget {
+  width: 50%;
 }
 .home .content-section {
   margin: 30px 0;
@@ -304,6 +316,22 @@ img {
 }
 .home .content-destination img {
   border-radius: 10px;
+  visibility: hidden;
+}
+.home .content-destination .destinationImgAni {
+  animation-name: slideUp;
+  animation-duration: 3s;
+  visibility: visible;
+}
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
 }
 .home .content-pick {
   padding-top: 30px;
@@ -349,4 +377,8 @@ img {
 .home .content-pick .destination .btn:hover {
   background: #FFFFFF;
   color: #17A2B8;
+}
+.home .form {
+  display: flex;
+  justify-content: space-evenly;
 }
